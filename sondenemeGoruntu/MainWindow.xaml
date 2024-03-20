@@ -1,0 +1,18 @@
+﻿<Window x:Class="sondenemeGoruntu.MainWindow"
+       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="OCR App" Height="450" Width="600">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <Button Grid.Row="0" Click="SelectImageButton_Click">Ekran Görüntüsü Seç</Button>
+        <Image x:Name="previewImage" Grid.Row="1" Stretch="Uniform" Margin="0,10,0,10"/>
+        <TextBox x:Name="txtResult" Grid.Row="2" TextWrapping="Wrap" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto" Margin="10"/>
+        <Button Grid.Row="3" Click="RecognizeTextButton_Click">Metni Tanı</Button>
+    </Grid>
+</Window>
